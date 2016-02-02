@@ -1,4 +1,7 @@
 <h1>Liste des administrateurs</h1>
+<?php if($this->session->flashdata('add_administrator_success')) : ?>
+    <div class="alert alert-success"><?php echo  $this->session->flashdata('add_administrator_success'); ?></div>
+<?php endif; ?>
 <div class="table-responsive">
     <button class="btn btn-inverse"><i class="glyphicon glyphicon-plus"></i><a class="btn btn-inverse" href="administrators/add">Ajouter un administrateur</a></button>
     <table class="table table-hover">

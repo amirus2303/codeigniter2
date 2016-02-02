@@ -9,6 +9,7 @@
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
     <link href="<?php echo base_url(); ?>assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="<?php echo base_url(); ?>assets/css/bootstrap-fileupload.min.css" rel="stylesheet" />
     <!--CUSTOM BASIC STYLES-->
     <link href="<?php echo base_url(); ?>assets/css/basic.css" rel="stylesheet" />
     <!--CUSTOM MAIN STYLES-->
