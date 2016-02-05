@@ -20,14 +20,28 @@ class Login extends CI_Controller{
 			$result_array = $this->login_model->verify_administrator($username, $password);
 			$result = array_shift($result_array);
 
+
 			if($result){
+
 				$user_data = array(
-					'id'        => $result->id,
-					'username'  => $username,
-					'logged_in' => true
+					'id'         => $result->id,
+					'username'   => $username,
+					'file_name'  => $result->file_name,
+					'logged_in'  => true,
+					'last_login' => $result->last_login
 					);
+
+
 				$this->session->set_userdata($user_data);
 				$this->session->set_flashdata('login_success', 'You are logged in');
+				
+				$last_login = array(
+					'last_login' => date('Y-m-j')
+					);
+
+				$id_administrator = $result->id;
+
+				$this->administrator_model->update_last_login($id_administrator, $last_login);
 				redirect('dashboard');
 			} else {
 				$this->session->set_flashdata('login_failed', 'You are not logged in');

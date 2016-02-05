@@ -3,12 +3,12 @@
         <ul class="nav" id="main-menu">
             <li>
                 <div class="user-img-div">
-                    <img src="<?php echo base_url(); ?>assets/img/user.png" class="img-thumbnail" />
+                    <img src="<?php echo base_url(); ?>uploads/<?php echo $this->session->userdata('file_name'); ?>" class="img-thumbnail" />
 
                     <div class="inner-text">
                         <?php echo $this->session->userdata('username'); ?>
                     <br />
-                        <small>Last Login : 2 Weeks Ago </small>
+                        <small>Dernière connexion : <?php echo date('j/m/Y',strtotime($this->session->userdata('last_login'))); ?></small>
                     </div>
                 </div>
 
@@ -16,9 +16,12 @@
 
 
             <li>
-                <a class="active-menu" href="<?php echo base_url(); ?>dashboard"><i class="fa fa-dashboard "></i>Dashboard</a>
+                <a  href="<?php echo base_url(); ?>dashboard"><i class="fa fa-dashboard "></i>Dashboard</a>
             </li>
+            <li><a href="<?php  echo base_url(); ?>administrators"><i class="fa fa-user "></i>Gestion des administrateurs</a></li>
+            <li><a href="<?php  echo base_url(); ?>classes"><i class="fa fa-bank "></i>Gestion des classes</a></li>
             <li>
+
                 <a href="#"><i class="fa fa-desktop "></i>UI Elements <span class="fa arrow"></span></a>
                  <ul class="nav nav-second-level">
                     <li>

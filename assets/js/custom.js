@@ -93,3 +93,12 @@
        
     });
 }(jQuery));
+
+
+/*Amir JS */
+$(document).ready(function(){
+    var $current_url = window.location.href;
+    var $active_link = $('#main-menu').find('a[href="'+ $current_url + '"]');
+    $active_link.addClass('active-menu');
+
+});

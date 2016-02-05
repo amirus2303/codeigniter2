@@ -243,7 +243,31 @@ ul#filters {
 		float:left;
 		overflow:hidden;
 	}
-	
+
+
+/*Amir CSS*/
 .form-horizontal .control-label{
     text-align: left;
+}
+
+.photo-user{
+    width: 80px;
+    height: 80px;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td{
+    vertical-align: middle;
+}
+
+.margin_top_40{
+    margin-top: 40px;
+}
+
+.full_width{
+    width: 100%;
 }
